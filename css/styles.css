@@ -1,0 +1,383 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent; /* Dark background for the header */
+    color: white;
+    position: absolute; /* Position the header over the hero section */
+
+    top: 0;
+    width: 100%; /* Ensure the header spans the entire width */
+    z-index: 1000; /* Keep the header above the hero background */
+}
+
+.header-left h1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.header-left h2 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.header-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Spacing between menu items */
+}
+
+.header-right ul li {
+    display: inline;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.header-right ul li a:hover {
+    color: #4CAF50; /* Green color on hover */
+}
+
+/* Sticky header for mobile adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-right ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+
+.hero {
+    background-image: url('../images/hero_section_image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Horizontally centers the content */
+    align-items: flex-end;    /* Aligns content to the bottom */
+    padding: 20px;
+    color: white;
+    position: relative; /* Ensure hero is below the header */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between; /* Keep the heading on the left and paragraph/buttons on the right */
+    align-items: flex-end;
+    width: 80%;
+    max-width: 1200px;
+    margin-bottom: 0vh; /* Move content up by adjusting this value */
+}
+
+/* Main Heading */
+.hero-text {
+    flex: 1; /* Occupies the left side */
+}
+.hero-text h1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 4rem;
+    max-width: 600px;
+}
+
+
+/* Paragraph and Buttons */
+.hero-details {
+    flex: 1; /* Occupies the right side */
+    text-align: right; /* Align the paragraph and buttons to the right */
+    margin-right: 8px; /* Move the right content outwards */
+}
+
+.hero-details p {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 300; /* Light weight */
+}
+
+/* Button Styles */
+.hero-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align the buttons to the right */
+    gap: 15px;
+}
+
+.hero-buttons .btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 0;
+    font-family: 'Avenir', serif;
+    font-size: 1rem;
+    border: 2px solid white; 
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    background-color: white; /* Fill white on hover */
+    color: #333; 
+}
+
+
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.services h2 {
+    font-family: 'EB Garamond', sand-serif;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 200;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.service h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Industries Section */
+.industries {
+    padding: 50px 20px;
+    background-color: #5E5E5E;
+    text-align: left;
+}
+
+.industries h2 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 200;
+    color: white
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.industry {
+    text-align: center; /* Center-align the content */
+    background-color: transparent; /* Remove any background */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none; /* Remove any box-shadow */
+}
+.industry img {
+    width: 50px; /* Set size for the icons */
+    height: 50px;
+    object-fit: contain; 
+    margin-bottom: 15px;
+}
+
+.industry h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.industry p {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #f4f4f4;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #AEB5AD;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 30px; /* Adds space between the text and the image */
+}
+
+.about-text h2 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 3rem;
+    font-weight: 300; /* Makes the heading thinner */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right; /* Align the image to the right */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain the image aspect ratio */
+    object-fit: cover; /* Ensures the image fits within the container */
+    border-radius: 8px; /* Optional: adds a slight border-radius for a modern look */
+}
+/* Contact Section */
+.contact {
+    padding: 60px 20px; /* Increased padding for larger section */
+    background-color: #333;
+    color: white;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-left h1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 4rem; /* Larger font for Contact */
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.contact-left h3 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 2.5rem; /* Larger font for Single Photon */
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.contact-left h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem; /* Slightly smaller for Consultancy */
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contact-right {
+    flex: 1;
+    text-align: right;
+}
+
+.contact-right p {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.contact-right a {
+    color: white; /* Make the link white */
+    text-decoration: none;
+}
+
+.contact-right a:hover {
+    text-decoration: underline; /* Only underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-right {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
