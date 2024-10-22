@@ -396,18 +396,18 @@ body {
     .hero-content {
         flex-direction: column; /* Stack the content vertically */
         align-items: center; /* Center the content horizontally */
-         margin-bottom: 40px; /* Add space between the sections */
+    
     }
 
-    .hero-text, .hero-details {
-        max-width: 100%;
+    .hero-text {
         text-align: center;
-        align-self: baseline;
-        margin-bottom: 10px; /* Add space between the sections */
+        margin-bottom: 20px; /* Add some spacing below hero text */
     }
 
     .hero-details {
-        margin-top: 20px;
+        margin-top: auto; /* Automatically push the details to the bottom */
+        margin-bottom: 40px; /* Ensure the details are closer to the bottom */
+        text-align: center;
     }
 
     .services-grid,
