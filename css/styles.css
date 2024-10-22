@@ -390,8 +390,8 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;
-        align-items: center;
+        height: 90vh; /* Reduce the height slightly to fit content better */
+        padding: 20px; /* Less padding on mobile */
     }
     .hero-content {
         flex-direction: column; /* Stack the content vertically */
