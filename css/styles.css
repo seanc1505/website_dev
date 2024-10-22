@@ -8,9 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-}
-
-/* Header */
+}/* Main Header */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -24,21 +22,35 @@ body {
     z-index: 1000;
 }
 
-.header-left h1 {
-    font-family: 'EB Garamond', sans-serif;
+/* Keep "Single Photon Consultancy" aligned to the left */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Always align left */
+}
+
+/* The menu and hamburger icon container on the right */
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    justify-content: flex-end; /* Always align the menu or hamburger to the right */
+}
+
+/* Hamburger Icon for Mobile */
+.hamburger {
+    display: none;
     font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 0;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px; /* Pin the hamburger to the right */
 }
 
-.header-left h2 {
-    font-family: 'EB Garamond', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-top: 0;
-}
-
-.header-right ul {
+/* Menu for larger screens */
+.menu {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -46,11 +58,12 @@ body {
     gap: 30px;
 }
 
-.header-right ul li {
-    display: inline;
+/* Each menu item */
+.menu li {
+    display: inline-block;
 }
 
-.header-right ul li a {
+.menu li a {
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 1rem;
@@ -58,9 +71,53 @@ body {
     transition: color 0.3s ease;
 }
 
-.header-right ul li a:hover {
+.menu li a:hover {
     color: #4CAF50;
 }
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 1000px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between; /* Ensure items are spaced between left and right */
+        padding: 10px 20px;
+        text-align: left; /* Ensure text stays left-aligned */
+    }
+
+    .header-left {
+        flex: 1; /* Make sure the left side takes up available space */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        right: 20px;
+        position: relative; /* Ensure it stays in the header */
+        z-index: 1001;
+    }
+
+    /* Hide the horizontal menu */
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        text-align: right;
+        border-radius: 4px;
+    }
+
+    .menu li {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Display menu when active (on click) */
+    .menu.active {
+        display: flex;
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -347,7 +404,7 @@ body {
 }
 
 /* Responsive adjustments for tablets and mobile */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .main-header {
         flex-direction: column;
         text-align: center;
