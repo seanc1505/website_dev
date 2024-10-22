@@ -10,12 +10,25 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Optional padding to add space inside the container */
+}
+/* Header-specific container */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between header-left and header-right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; /* Ensures the container spans the full width */
+}
 /* Header Section */
 .main-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Center the container itself horizontally */
     padding: 20px;
     background-color: transparent;
     color: white;
@@ -25,12 +38,12 @@ body {
     z-index: 1000;
 }
 
+
 .header-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
 .header-left h1,
 .header-left h2 {
     font-family: 'EB Garamond', sans-serif;
@@ -52,8 +65,6 @@ body {
 .header-right {
     display: flex;
     align-items: center;
-    position: relative;
-    flex-grow: 1;
     justify-content: flex-end;
 }
 
@@ -82,7 +93,7 @@ body {
 }
 
 /* Responsive Navigation */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .main-header {
         flex-direction: row;
         justify-content: space-between;
@@ -117,17 +128,33 @@ body {
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: flex-end; /* Align the content to the bottom */
+    justify-content: center;
+    align-items: flex-end;
     padding: 40px;
     color: white;
 }
+/* Reduce the height of the hero section for larger screens */
+@media (min-width: 1400px) {
+    .hero {
+        height: 65vh; /* Reduce height on larger screens */
+        padding-bottom: 6vh; /*Optional for vertical spacing */
+        background-position: center center; /* Keep the image centered */
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem; /* Optional: reduce the size of hero text on larger screens */
+    }
+
+    .hero-details p {
+        font-size: 1.3rem; /* Adjust hero details text size */
+    }
+}
 
 .hero-content {
-    width: 100%; /* Make sure the content spans the full width */
     display: flex;
-    justify-content: space-between; /* Space content to left and right */
-    align-items: flex-end; /* Ensure both hero-text and hero-details are at the bottom */
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
 }
 
 .hero-text {
@@ -375,7 +402,8 @@ body {
     .hero-text, .hero-details {
         max-width: 100%;
         text-align: center;
-        margin-bottom: 20px; /* Add space between the sections */
+        align-self: baseline;
+        margin-bottom: 40px; /* Add space between the sections */
     }
 
     .hero-details {
@@ -398,7 +426,16 @@ body {
         text-align: center;
         margin-bottom: 20px;
     }
-
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .contact-right {
+        align-self: center;
+        text-align: center;
+    }
     .hero-text h1 {
         font-size: 2.5rem;
     }
