@@ -396,14 +396,14 @@ body {
     .hero-content {
         flex-direction: column; /* Stack the content vertically */
         align-items: center; /* Center the content horizontally */
-         margin-bottom: 20px; /* Add space between the sections */
+         margin-bottom: 40px; /* Add space between the sections */
     }
 
     .hero-text, .hero-details {
         max-width: 100%;
         text-align: center;
         align-self: baseline;
-        margin-bottom: 40px; /* Add space between the sections */
+        margin-bottom: 10px; /* Add space between the sections */
     }
 
     .hero-details {
