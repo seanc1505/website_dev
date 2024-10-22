@@ -1,4 +1,3 @@
-/* styles.css */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,13 +16,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: transparent; /* Dark background for the header */
+    background-color: transparent;
     color: white;
-    position: absolute; /* Position the header over the hero section */
-
+    position: absolute;
     top: 0;
-    width: 100%; /* Ensure the header spans the entire width */
-    z-index: 1000; /* Keep the header above the hero background */
+    width: 100%;
+    z-index: 1000;
 }
 
 .header-left h1 {
@@ -45,7 +43,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px; /* Spacing between menu items */
+    gap: 30px;
 }
 
 .header-right ul li {
@@ -61,75 +59,60 @@ body {
 }
 
 .header-right ul li a:hover {
-    color: #4CAF50; /* Green color on hover */
+    color: #4CAF50;
 }
 
-/* Sticky header for mobile adjustments */
-@media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-right ul {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
-    }
-}
-
-
+/* Hero Section */
 .hero {
     background-image: url('../images/hero_section_image.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center;  /* Horizontally centers the content */
-    align-items: flex-end;    /* Aligns content to the bottom */
+    justify-content: center;
+    align-items: flex-end;
     padding: 20px;
     color: white;
-    position: relative; /* Ensure hero is below the header */
+    position: relative;
 }
 
 .hero-content {
     display: flex;
-    justify-content: space-between; /* Keep the heading on the left and paragraph/buttons on the right */
+    justify-content: space-between;
     align-items: flex-end;
     width: 80%;
     max-width: 1200px;
-    margin-bottom: 0vh; /* Move content up by adjusting this value */
+    margin-bottom: 10vh;
 }
 
 /* Main Heading */
 .hero-text {
-    flex: 1; /* Occupies the left side */
+    flex: 1;
 }
+
 .hero-text h1 {
     font-family: 'EB Garamond', sans-serif;
     font-size: 4rem;
     max-width: 600px;
 }
 
-
 /* Paragraph and Buttons */
 .hero-details {
-    flex: 1; /* Occupies the right side */
-    text-align: right; /* Align the paragraph and buttons to the right */
-    margin-right: 8px; /* Move the right content outwards */
+    flex: 1;
+    text-align: right;
+    margin-right: 8px;
 }
 
 .hero-details p {
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     margin-bottom: 20px;
-    font-weight: 300; /* Light weight */
+    font-weight: 300;
 }
 
-/* Button Styles */
 .hero-buttons {
     display: flex;
-    justify-content: flex-end; /* Align the buttons to the right */
+    justify-content: flex-end;
     gap: 15px;
 }
 
@@ -143,11 +126,7 @@ body {
     font-weight: 300;
 }
 
-.btn-primary {
-    background-color: transparent;
-    color: white;
-}
-
+.btn-primary,
 .btn-secondary {
     background-color: transparent;
     color: white;
@@ -156,11 +135,9 @@ body {
 .btn:hover {
     opacity: 0.8;
     transition: opacity 0.3s ease;
-    background-color: white; /* Fill white on hover */
-    color: #333; 
+    background-color: white;
+    color: #333;
 }
-
-
 
 /* Services Section */
 .services {
@@ -170,7 +147,7 @@ body {
 }
 
 .services h2 {
-    font-family: 'EB Garamond', sand-serif;
+    font-family: 'EB Garamond', sans-serif;
     font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 200;
@@ -178,7 +155,7 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -188,7 +165,6 @@ body {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .service h3 {
@@ -215,26 +191,27 @@ body {
     font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 200;
-    color: white
+    color: white;
 }
 
 .industries-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .industry {
-    text-align: center; /* Center-align the content */
-    background-color: transparent; /* Remove any background */
-    padding: 0; /* Remove padding */
-    border-radius: 0; /* Remove border-radius */
-    box-shadow: none; /* Remove any box-shadow */
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
+
 .industry img {
-    width: 50px; /* Set size for the icons */
+    width: 50px;
     height: 50px;
     object-fit: contain; 
     margin-bottom: 15px;
@@ -271,13 +248,13 @@ body {
 
 .about-text {
     flex: 1;
-    padding-right: 30px; /* Adds space between the text and the image */
+    padding-right: 30px;
 }
 
 .about-text h2 {
     font-family: 'EB Garamond', sans-serif;
     font-size: 3rem;
-    font-weight: 300; /* Makes the heading thinner */
+    font-weight: 300;
     margin-bottom: 20px;
 }
 
@@ -290,19 +267,20 @@ body {
 
 .about-image {
     flex: 1;
-    text-align: right; /* Align the image to the right */
+    text-align: right;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 500px; /* Limit the maximum width of the image */
-    height: auto; /* Maintain the image aspect ratio */
-    object-fit: cover; /* Ensures the image fits within the container */
-    border-radius: 8px; /* Optional: adds a slight border-radius for a modern look */
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
+
 /* Contact Section */
 .contact {
-    padding: 60px 20px; /* Increased padding for larger section */
+    padding: 60px 20px;
     background-color: #333;
     color: white;
 }
@@ -322,21 +300,21 @@ body {
 
 .contact-left h1 {
     font-family: 'EB Garamond', sans-serif;
-    font-size: 4rem; /* Larger font for Contact */
+    font-size: 4rem;
     font-weight: 400;
     margin-bottom: 10px;
 }
 
 .contact-left h3 {
     font-family: 'EB Garamond', sans-serif;
-    font-size: 2.5rem; /* Larger font for Single Photon */
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 0;
 }
 
 .contact-left h4 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.2rem; /* Slightly smaller for Consultancy */
+    font-size: 1.2rem;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 20px;
@@ -360,24 +338,87 @@ body {
 }
 
 .contact-right a {
-    color: white; /* Make the link white */
+    color: white;
     text-decoration: none;
 }
 
 .contact-right a:hover {
-    text-decoration: underline; /* Only underline on hover */
+    text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tablets and mobile */
 @media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-right ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 5vh;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-details p {
+        font-size: 1.5rem;
+    }
+
+    .services-grid,
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
     .contact-content {
         flex-direction: column;
         text-align: center;
     }
 
+    .contact-left,
     .contact-right {
-        text-align: center;
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-details p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .services h2,
+    .industries h2,
+    .about h2 {
+        font-size: 2.5rem;
+    }
+}
