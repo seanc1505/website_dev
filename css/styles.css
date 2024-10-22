@@ -395,18 +395,19 @@ body {
     }
     .hero-content {
         flex-direction: column; /* Stack the content vertically */
-        align-items: center; /* Center the content horizontally */
-    
+        align-items: center;
+        justify-content: space-between; /* Spread out the content */
+        height: 100%; /* Ensure the content fills the hero */
     }
 
     .hero-text {
+        margin-bottom: auto; /* Pushes the text towards the top */
         text-align: center;
-        margin-bottom: 20px; /* Add some spacing below hero text */
     }
 
     .hero-details {
-        margin-top: auto; /* Automatically push the details to the bottom */
-        margin-bottom: 40px; /* Ensure the details are closer to the bottom */
+        margin-top: auto; /* Automatically pushes hero-details to the bottom */
+        margin-bottom: 20px; /* Add space between the details and the bottom */
         text-align: center;
     }
 
