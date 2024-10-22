@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,12 +6,12 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif; /* Replaced with Lato for body text */
+    font-family: 'Lato', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Main Header */
+/* Header Section */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -24,50 +25,46 @@ body {
     z-index: 1000;
 }
 
-/* Keep "Single Photon Consultancy" aligned to the left */
 .header-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Always align left */
+    align-items: flex-start;
 }
 
-/* The menu and hamburger icon container on the right */
+.header-left h1,
+.header-left h2 {
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.header-left h1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+
+    margin-bottom: 5px;
+}
+
+.header-left h2 {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
 .header-right {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     position: relative;
     flex-grow: 1;
-    justify-content: flex-end; /* Always align the menu or hamburger to the right */
+    justify-content: flex-end;
 }
 
-/* Hamburger Icon for Mobile */
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    right: 20px; /* Pin the hamburger to the right */
-}
-
-/* Menu for larger screens */
 .menu {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 30px;
 }
 
-/* Each menu item */
-.menu li {
-    display: inline-block;
-}
-
 .menu li a {
     text-decoration: none;
-    font-family: 'Lato', sans-serif; /* Use Lato for menu text */
     font-size: 1rem;
     color: white;
     transition: color 0.3s ease;
@@ -77,27 +74,25 @@ body {
     color: #4CAF50;
 }
 
-/* Responsive adjustments for tablets and mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Navigation */
 @media (max-width: 1000px) {
     .main-header {
         flex-direction: row;
-        justify-content: space-between; /* Ensure items are spaced between left and right */
+        justify-content: space-between;
         padding: 10px 20px;
-        text-align: left; /* Ensure text stays left-aligned */
-    }
-
-    .header-left {
-        flex: 1; /* Make sure the left side takes up available space */
     }
 
     .hamburger {
-        display: block; /* Show hamburger on mobile */
-        right: 20px;
-        position: relative; /* Ensure it stays in the header */
-        z-index: 1001;
+        display: block;
     }
 
-    /* Hide the horizontal menu */
     .menu {
         display: none;
         flex-direction: column;
@@ -106,16 +101,9 @@ body {
         top: 60px;
         right: 20px;
         width: 150px;
-        text-align: right;
         border-radius: 4px;
     }
 
-    .menu li {
-        display: block;
-        padding: 10px;
-    }
-
-    /* Display menu when active (on click) */
     .menu.active {
         display: flex;
     }
@@ -123,90 +111,77 @@ body {
 
 /* Hero Section */
 .hero {
+    position: relative;
     background-image: url('../images/hero_section_image.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-end; /* Align the content to the bottom */
+    padding: 40px;
     color: white;
-    position: relative;
 }
 
 .hero-content {
+    width: 100%; /* Make sure the content spans the full width */
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 80%;
-    max-width: 1200px;
-    margin-bottom: 10vh;
+    justify-content: space-between; /* Space content to left and right */
+    align-items: flex-end; /* Ensure both hero-text and hero-details are at the bottom */
 }
 
-/* Main Heading */
 .hero-text {
-    flex: 1;
+    max-width: 40%; /* Keeps the text in the left quadrant */
+    text-align: left;
 }
 
 .hero-text h1 {
-    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for the main heading */
+    font-family: 'EB Garamond', sans-serif;
     font-size: 4rem;
-    max-width: 600px;
 }
 
-/* Paragraph and Buttons */
 .hero-details {
-    flex: 1;
+    max-width: 40%; /* Keeps the details in the right quadrant */
     text-align: right;
-    margin-right: 8px;
 }
 
 .hero-details p {
-    font-family: 'Lato', sans-serif; /* Use Lato for paragraph text */
-    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 300;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
+    font-family: 'Lato', sans-serif;
+    gap: 60px;
+    justify-content: flex-end; /* Align buttons to the right */
 }
 
 .hero-buttons .btn {
-    text-decoration: none;
     padding: 15px 30px;
-    border-radius: 0;
-    font-family: 'Avenir', serif;
+    border: 2px solid white;
     font-size: 1rem;
-    border: 2px solid white; 
-    font-weight: 300;
-}
-
-.btn-primary,
-.btn-secondary {
     background-color: transparent;
+    text-decoration: none;
     color: white;
+    transition: opacity 0.3s ease;
 }
 
 .btn:hover {
     opacity: 0.8;
-    transition: opacity 0.3s ease;
-    background-color: white;
-    color: #333;
 }
+
 
 /* Services Section */
 .services {
     padding: 50px 20px;
     background-color: #f4f4f4;
-    text-align: left;
 }
 
 .services h2 {
-    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for services heading */
+    font-family: 'EB Garamond', sans-serif;
     font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 200;
@@ -220,33 +195,14 @@ body {
     margin: 0 auto;
 }
 
-.service {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.service h3 {
-    font-family: 'Lato', sans-serif; /* Use Lato for service subheadings */
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.service p {
-    font-family: 'Lato', sans-serif; /* Use Lato for service paragraph text */
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
 /* Industries Section */
 .industries {
     padding: 50px 20px;
     background-color: #5E5E5E;
-    text-align: left;
 }
 
 .industries h2 {
-    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for industries heading */
+    font-family: 'EB Garamond', sans-serif;
     font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 200;
@@ -263,31 +219,31 @@ body {
 
 .industry {
     text-align: center;
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .industry img {
     width: 50px;
     height: 50px;
-    object-fit: contain; 
-    margin-bottom: 15px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .industry h3 {
-    font-family: 'Lato', sans-serif; /* Use Lato for industry subheadings */
+    font-family: 'Lato', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: white;
 }
 
 .industry p {
-    font-family: 'Lato', sans-serif; /* Use Lato for industry paragraph text */
+    font-family: 'Lato', sans-serif;
     font-size: 1rem;
     line-height: 1.4;
     color: #f4f4f4;
+    text-align: center;
 }
 
 /* About Section */
@@ -298,45 +254,23 @@ body {
 
 .about-content {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.about-text {
-    flex: 1;
-    padding-right: 30px;
-}
-
 .about-text h2 {
-    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for about heading */
-    font-size: 3rem;
-    font-weight: 300;
-    margin-bottom: 20px;
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 200;
+    color: white;
 }
 
 .about-text p {
-    font-family: 'Lato', sans-serif; /* Use Lato for about paragraph text */
     font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
 }
-
-.about-image {
-    flex: 1;
-    text-align: right;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
+/* Contact Section */
 /* Contact Section */
 .contact {
     padding: 60px 20px;
@@ -346,96 +280,92 @@ body {
 
 .contact-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Keeps left and right sections apart */
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
+    height: 100%; /* Ensures the flex container takes up the full height */
+}
+
+.contact-left,
+.contact-right {
+    flex: 1; /* Ensures both sections take up equal width */
 }
 
 .contact-left {
-    flex: 1;
+    padding-right: 20px; /* Adds spacing between the two sections */
+}
+
+.contact-left h1,
+.contact-left h3,
+.contact-left h4 {
+    font-family: 'EB Garamond', sans-serif;
 }
 
 .contact-left h1 {
-    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for contact heading */
-    font-size: 4rem;
-    font-weight: 400;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 200;
+    color: white;
 }
 
 .contact-left h3 {
-    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for contact subheading */
+    font-family: 'EB Garamond', sans-serif;
     font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 0;
+    font-weight: 200;
+    margin-bottom: 5px;
 }
 
 .contact-left h4 {
-    font-family: 'Lato', sans-serif; /* Use Lato for smaller contact text */
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.contact-left p {
-    font-family: 'Lato', sans-serif; /* Use Lato for smaller contact paragraph */
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 01.2rem;
+    font-weight: 200;
 }
 
 .contact-right {
-    flex: 1;
-    text-align: right;
+    align-self: flex-end; /* Pushes the content to the bottom */
+    text-align: right; /* Ensures the text is aligned to the right */
 }
 
-.contact-right p {
-    font-family: 'Lato', sans-serif; /* Use Lato for contact paragraph */
-    font-size: 1rem;
-    margin: 5px 0;
+.contact-right p{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.contact-left p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
 }
 
-.contact-right a {
+.contact-right p a {
     color: white;
     text-decoration: none;
 }
 
-.contact-right a:hover {
+.contact-right p a:hover {
     text-decoration: underline;
+    color: #4CAF50; /* Adds a color to the links */
 }
 
-/* Responsive adjustments for tablets and mobile */
+/* Responsive adjustments */
 @media (max-width: 1000px) {
-    .main-header {
+    .hero {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text, .hero-details {
+        max-width: 100%;
         text-align: center;
     }
 
-    .header-right ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 5vh;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-details p {
-        font-size: 1.5rem;
+    .hero-details {
+        margin-top: 20px;
     }
 
     .services-grid,
     .industries-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .about-content {
@@ -443,36 +373,19 @@ body {
         text-align: center;
     }
 
-    .about-text {
-        margin-bottom: 20px;
-    }
-
-    .about-image img {
-        max-width: 100%;
-    }
-
     .contact-content {
         flex-direction: column;
         text-align: center;
     }
-
-    .contact-left,
-    .contact-right {
-        margin-bottom: 20px;
-    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-details p {
         font-size: 1.2rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
     }
 
     .services h2,
