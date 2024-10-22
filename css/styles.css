@@ -5,10 +5,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Replaced with Lato for body text */
     background-color: #f4f4f4;
     color: #333;
-}/* Main Header */
+}
+
+/* Main Header */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -65,7 +67,7 @@ body {
 
 .menu li a {
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for menu text */
     font-size: 1rem;
     color: white;
     transition: color 0.3s ease;
@@ -74,6 +76,7 @@ body {
 .menu li a:hover {
     color: #4CAF50;
 }
+
 /* Responsive adjustments for tablets and mobile */
 @media (max-width: 1000px) {
     .main-header {
@@ -118,7 +121,6 @@ body {
     }
 }
 
-
 /* Hero Section */
 .hero {
     background-image: url('../images/hero_section_image.jpg');
@@ -148,7 +150,7 @@ body {
 }
 
 .hero-text h1 {
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for the main heading */
     font-size: 4rem;
     max-width: 600px;
 }
@@ -161,7 +163,7 @@ body {
 }
 
 .hero-details p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for paragraph text */
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: 300;
@@ -204,7 +206,7 @@ body {
 }
 
 .services h2 {
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for services heading */
     font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 200;
@@ -225,13 +227,13 @@ body {
 }
 
 .service h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for service subheadings */
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .service p {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for service paragraph text */
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -244,7 +246,7 @@ body {
 }
 
 .industries h2 {
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for industries heading */
     font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 200;
@@ -275,14 +277,14 @@ body {
 }
 
 .industry h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for industry subheadings */
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: white;
 }
 
 .industry p {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for industry paragraph text */
     font-size: 1rem;
     line-height: 1.4;
     color: #f4f4f4;
@@ -309,14 +311,14 @@ body {
 }
 
 .about-text h2 {
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for about heading */
     font-size: 3rem;
     font-weight: 300;
     margin-bottom: 20px;
 }
 
 .about-text p {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for about paragraph text */
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
@@ -356,21 +358,21 @@ body {
 }
 
 .contact-left h1 {
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for contact heading */
     font-size: 4rem;
     font-weight: 400;
     margin-bottom: 10px;
 }
 
 .contact-left h3 {
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'EB Garamond', sans-serif; /* Keep EB Garamond for contact subheading */
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 0;
 }
 
 .contact-left h4 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for smaller contact text */
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 0;
@@ -378,7 +380,7 @@ body {
 }
 
 .contact-left p {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for smaller contact paragraph */
     font-size: 1rem;
     font-weight: 300;
 }
@@ -389,7 +391,7 @@ body {
 }
 
 .contact-right p {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Use Lato for contact paragraph */
     font-size: 1rem;
     margin: 5px 0;
 }
