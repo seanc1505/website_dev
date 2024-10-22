@@ -403,12 +403,14 @@ body {
     .hero-text {
         margin-bottom: auto; /* Pushes the text towards the top */
         text-align: center;
+        font-size: 2rem; 
     }
 
     .hero-details {
         margin-top: auto; /* Automatically pushes hero-details to the bottom */
         margin-bottom: 20px; /* Add space between the details and the bottom */
         text-align: center;
+        font-size: 1rem;
     }
 
     .services-grid,
