@@ -397,8 +397,8 @@ body {
         height: 100%; /* Ensure the hero section takes the full height */
     }
     .hero-text {
-        margin-top: 80px;  
-        margin-bottom: auto;
+        margin-top: 60px;  
+        /* margin-bottom: auto; */
         
         text-align: center; /* Center text for better balance */
         max-width: 80%; /* Limit width for readability */
