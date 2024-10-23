@@ -390,29 +390,47 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
-        height: 90vh; /* Reduce the height slightly to fit content better */
-        padding: 20px; /* Less padding on mobile */
+        height: 85vh; /* Adjust height for better fit on mobile */
+        padding: 20px; /* Less padding for mobile */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align content closer to the top */
     }
+
     .hero-content {
-        flex-direction: column; /* Stack the content vertically */
+        flex-direction: column; /* Stack content vertically */
         align-items: center;
-        justify-content: space-between; /* Spread out the content */
-        height: 100%; /* Ensure the content fills the hero */
+        justify-content: space-between;
+        height: 100%; /* Ensure content fills the height of the hero section */
     }
 
     .hero-text {
-        margin-bottom: auto; /* Pushes the text towards the top */
+        margin-top: 20px; /* Add space at the top */
+        margin-bottom: auto; /* Pushes the text upwards */
         text-align: center;
-        font-size: 1.2rem; 
+        font-size: 1.8rem; /* Adjust font size for mobile */
+        line-height: 1.2; /* Tighter line height for better fit */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Make the hero title smaller for mobile */
     }
 
     .hero-details {
-        margin-top: auto; /* Automatically pushes hero-details to the bottom */
-        margin-bottom: 20px; /* Add space between the details and the bottom */
+        margin-top: auto; /* Push hero details to the bottom */
+        margin-bottom: 30px; /* Space between details and bottom */
         text-align: center;
-        font-size: .6rem;
     }
 
+    .hero-details p {
+        font-size: 1rem; /* Adjust font size for details text */
+        line-height: 1.4; /* Improve readability */
+    }
+
+    .hero-buttons .btn {
+        font-size: 0.9rem; /* Reduce button text size for mobile */
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+    }
     .services-grid,
     .industries-grid {
         grid-template-columns: 1fr;
