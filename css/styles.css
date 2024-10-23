@@ -407,7 +407,8 @@ body {
     .hero-text {
         margin-top: 20px; /* Add space at the top */
         margin-bottom: auto; /* Pushes the text upwards */
-        text-align: center;
+        text-align: left;
+        max-width: 90%; /* Increase text width on mobile for better readability */
         font-size: 1.8rem; /* Adjust font size for mobile */
         line-height: 1.2; /* Tighter line height for better fit */
     }
@@ -418,8 +419,9 @@ body {
 
     .hero-details {
         margin-top: auto; /* Push hero details to the bottom */
+        max-width: 100%; /* Ensure title spans the full width on mobile */
         margin-bottom: 30px; /* Space between details and bottom */
-        text-align: center;
+        text-align: right;
     }
 
     .hero-details p {
