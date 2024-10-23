@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,22 +12,23 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Optional padding to add space inside the container */
+    padding: 0 20px; 
 }
+
 /* Header-specific container */
 .header-container {
     display: flex;
-    justify-content: space-between; /* Space between header-left and header-right */
+    justify-content: space-between; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    width: 100%; /* Ensures the container spans the full width */
+    width: 100%; 
 }
 /* Header Section */
 .main-header {
     display: flex;
-    justify-content: center; /* Center the container itself horizontally */
+    justify-content: center;
     padding: 20px;
     background-color: transparent;
     color: white;
@@ -133,20 +133,20 @@ body {
     padding: 40px;
     color: white;
 }
-/* Reduce the height of the hero section for larger screens */
+
 @media (min-width: 1400px) {
     .hero {
-        height: 65vh; /* Reduce height on larger screens */
-        padding-bottom: 6vh; /*Optional for vertical spacing */
-        background-position: center center; /* Keep the image centered */
+        height: 65vh;
+        padding-bottom: 6vh;
+        background-position: center ; 
     }
 
     .hero-text h1 {
-        font-size: 3.5rem; /* Optional: reduce the size of hero text on larger screens */
+        font-size: 3.5rem; 
     }
 
     .hero-details p {
-        font-size: 1.3rem; /* Adjust hero details text size */
+        font-size: 1.3rem; 
     }
 }
 
@@ -158,7 +158,7 @@ body {
 }
 
 .hero-text {
-    max-width: 40%; /* Keeps the text in the left quadrant */
+    max-width: 40%; 
     text-align: left;
 }
 
@@ -168,7 +168,7 @@ body {
 }
 
 .hero-details {
-    max-width: 40%; /* Keeps the details in the right quadrant */
+    max-width: 40%; 
     text-align: right;
 }
 
@@ -183,7 +183,7 @@ body {
     display: flex;
     font-family: 'Lato', sans-serif;
     gap: 60px;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end;
 }
 
 .hero-buttons .btn {
@@ -290,7 +290,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers only the paragraph content vertically */
+    justify-content: center; 
     padding-right: 20px;
 }
 .about-text h2 {
@@ -320,20 +320,20 @@ body {
 
 .contact-content {
     display: flex;
-    justify-content: space-between; /* Keeps left and right sections apart */
+    justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%; /* Ensures the flex container takes up the full height */
+    height: 100%;
 }
 
 .contact-left,
 .contact-right {
-    flex: 1; /* Ensures both sections take up equal width */
+    flex: 1; 
 }
 
 .contact-left {
-    padding-right: 20px; /* Adds spacing between the two sections */
+    padding-right: 20px;
 }
 
 .contact-left h1,
@@ -362,8 +362,8 @@ body {
 }
 
 .contact-right {
-    align-self: flex-end; /* Pushes the content to the bottom */
-    text-align: right; /* Ensures the text is aligned to the right */
+    align-self: flex-end;
+    text-align: right; 
 }
 
 .contact-right p{
@@ -384,45 +384,45 @@ body {
 
 .contact-right p a:hover {
     text-decoration: underline;
-    color: #4CAF50; /* Adds a color to the links */
+    color: #4CAF50; 
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-content {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center the stacked items */
+        flex-direction: column;
+        align-items: center; 
         justify-content: flex-start; 
         padding: 20px;
-        height: 100%; /* Ensure the hero section takes the full height */
+        height: 100%; 
     }
     .hero-text {
         margin-top: 60px;  
-        /* margin-bottom: auto; */
+     
         
-        text-align: center; /* Center text for better balance */
-        max-width: 80%; /* Limit width for readability */
+        text-align: center;
+        max-width: 80%; 
         
-        line-height: 1.3; /* Better line height for spacing */
+        line-height: 1.3;
     }
 
     .hero-text h1 {
-        font-size: 6vw; /* Make the title smaller */
-        line-height: 1.1; /* Slightly tighter line height */
+        font-size: 6vw; 
+        line-height: 1.1;
     }
 
 
     .hero-details {
-        margin-top: auto; /* Pushes the details to the bottom */
-        margin-bottom: 30px; /* Adds some spacing at the bottom */
-        text-align: center; /* Center-align the details for smaller screens */
-        max-width: 90%; /* Increase width for readability */
+        margin-top: auto;
+        margin-bottom: 30px;
+        text-align: center; 
+        max-width: 90%; 
         line-height: 1.4;
     }
 
     .hero-details p {
-        font-size: 4vw; /* Smaller details text */
-        line-height: 1.3; /* Adjust line height for readability */
+        font-size: 4vw; 
+        line-height: 1.3; 
     }
 
     .hero-buttons .btn {
