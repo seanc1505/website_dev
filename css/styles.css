@@ -389,10 +389,16 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center the stacked items */
+        justify-content: center; /* Vertically center the content */
+        height: 100%; /* Ensure the hero section takes the full height */
+    }
     .hero-text {
         margin-top: 20px; 
         margin-bottom: auto;
-        flex-direction: column;
+        
         text-align: center; /* Center text for better balance */
         max-width: 80%; /* Limit width for readability */
         font-size: 1.8rem; /* Slightly smaller font size */
