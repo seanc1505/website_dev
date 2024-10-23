@@ -392,6 +392,7 @@ body {
     .hero-text {
         margin-top: 20px; 
         margin-bottom: auto;
+        flex-direction: column;
         text-align: center; /* Center text for better balance */
         max-width: 80%; /* Limit width for readability */
         font-size: 1.8rem; /* Slightly smaller font size */
@@ -420,7 +421,6 @@ body {
         padding: 10px 20px;
     }
 
-    
     .services-grid,
     .industries-grid {
         grid-template-columns: 1fr;
