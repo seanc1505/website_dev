@@ -392,33 +392,36 @@ body {
     .hero-content {
         flex-direction: column; /* Stack content vertically */
         align-items: center; /* Center the stacked items */
-        justify-content: center; /* Vertically center the content */
+        justify-content: flex-start; 
+        padding: 20px;
         height: 100%; /* Ensure the hero section takes the full height */
     }
     .hero-text {
-        margin-top: 20px; 
+        margin-top: 80px;  
         margin-bottom: auto;
         
         text-align: center; /* Center text for better balance */
         max-width: 80%; /* Limit width for readability */
-        font-size: 1.8rem; /* Slightly smaller font size */
+        
         line-height: 1.3; /* Better line height for spacing */
     }
 
     .hero-text h1 {
-        font-size: 2rem; /* Make the title smaller */
+        font-size: 6vw; /* Make the title smaller */
         line-height: 1.1; /* Slightly tighter line height */
     }
 
+
     .hero-details {
-        margin-top: auto; 
-        max-width: 90%; /* Limit width of details text */
-        margin-bottom: 20px; /* Adjust bottom margin */
-        text-align: center; /* Center-align the details */
+        margin-top: auto; /* Pushes the details to the bottom */
+        margin-bottom: 30px; /* Adds some spacing at the bottom */
+        text-align: center; /* Center-align the details for smaller screens */
+        max-width: 90%; /* Increase width for readability */
+        line-height: 1.4;
     }
 
     .hero-details p {
-        font-size: 1rem; /* Smaller details text */
+        font-size: 4vw; /* Smaller details text */
         line-height: 1.3; /* Adjust line height for readability */
     }
 
