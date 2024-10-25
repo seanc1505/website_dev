@@ -469,8 +469,9 @@ body {
     .hero-details p {
         font-size: 1.2rem;
     }
-    .about-image{
-        max-width: 100%;
+    .about-image {
+        max-width: 100%;   /* Ensures the image never exceeds the screen width */
+        width: 90%;        /* Adds some space around the image on smaller screens */
     }
     .services h2,
     .industries h2,
