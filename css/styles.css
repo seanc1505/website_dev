@@ -469,7 +469,9 @@ body {
     .hero-details p {
         font-size: 1.2rem;
     }
-
+    .about-image{
+        max-width: 100%;
+    }
     .services h2,
     .industries h2,
     .about h2 {
