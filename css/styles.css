@@ -440,7 +440,9 @@ body {
     .industries-grid {
         grid-template-columns: 1fr;
     }
-
+    .about{
+        width: 100%;
+    }
     .about-content {
         flex-direction: column;
         text-align: center;
