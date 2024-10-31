@@ -470,8 +470,10 @@ body {
         font-size: 1.2rem;
     }
     .about-image {
-        max-width: 100%;   /* Ensures the image never exceeds the screen width */
-        width: 90%;        /* Adds some space around the image on smaller screens */
+        max-width: 100%;
+        width: 100%; /* Ensures the image takes up the full width of the container */
+        height: auto; /* Keeps the aspect ratio */
+        
     }
     .services h2,
     .industries h2,
