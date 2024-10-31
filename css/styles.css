@@ -293,7 +293,7 @@ body {
     justify-content: center; 
     padding-right: 20px;
 }
-.about-content h2 {
+.about-text h2 {
     font-family: 'EB Garamond', sans-serif;
     font-size: 3.5rem;
     margin-bottom: 40px;
@@ -404,11 +404,11 @@ body {
     }
     .hero-text {
         margin-top: 60px;  
-     
-        
+
+
         text-align: center;
         max-width: 80%; 
-        
+
         line-height: 1.3;
     }
 
@@ -443,13 +443,14 @@ body {
     .about{
         width: 100%;
     }
-    .about-content h2 {
+    .about-text h2 {
         text-align: left;
     }
     .about-content {
         flex-direction: column;
+        /* text-align: center; */
     }
-    .about-text{
+    .about-text p {
         text-align: center; 
     }
 
@@ -480,7 +481,7 @@ body {
         object-fit: cover;
         width: 300px; /* Forces a specific width */
         height: 200px; /* Forces a specific height */
-        
+
     }
     .services h2,
     .industries h2,
