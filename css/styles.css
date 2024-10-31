@@ -443,6 +443,9 @@ body {
     .about{
         width: 100%;
     }
+    .about-text h2 {
+        text-align: left;
+    }
     .about-content {
         flex-direction: column;
         text-align: center;
