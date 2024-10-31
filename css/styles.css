@@ -469,7 +469,7 @@ body {
     .hero-details p {
         font-size: 1.2rem;
     }
-    .about-image {
+    .about-image img{
         object-fit: cover;
         width: 30px; /* Forces a specific width */
         height: 20px; /* Forces a specific height */
