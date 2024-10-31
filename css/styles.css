@@ -293,7 +293,7 @@ body {
     justify-content: center; 
     padding-right: 20px;
 }
-.about-text h2 {
+.about-content h2 {
     font-family: 'EB Garamond', sans-serif;
     font-size: 3.5rem;
     margin-bottom: 40px;
@@ -443,14 +443,13 @@ body {
     .about{
         width: 100%;
     }
-    .about-text h2 {
+    .about-content h2 {
         text-align: left;
     }
     .about-content {
         flex-direction: column;
-        /* text-align: center; */
     }
-    .about-text p {
+    .about-text{
         text-align: center; 
     }
 
