@@ -450,6 +450,9 @@ body {
         flex-direction: column;
         /* text-align: center; */
     }
+    .about-text p {
+        text-align: center; 
+    }
 
     .contact-content {
         flex-direction: column;
