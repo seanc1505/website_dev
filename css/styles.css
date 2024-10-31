@@ -473,8 +473,8 @@ body {
     }
     .about-image img{
         object-fit: cover;
-        width: 30px; /* Forces a specific width */
-        height: 20px; /* Forces a specific height */
+        width: 300px; /* Forces a specific width */
+        height: 200px; /* Forces a specific height */
         
     }
     .services h2,
