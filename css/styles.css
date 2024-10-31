@@ -470,9 +470,9 @@ body {
         font-size: 1.2rem;
     }
     .about-image {
-        max-width: 100%;
-        width: 100%; /* Ensures the image takes up the full width of the container */
-        height: auto; /* Keeps the aspect ratio */
+        object-fit: cover;
+        width: 300px; /* Forces a specific width */
+        height: 200px; /* Forces a specific height */
         
     }
     .services h2,
